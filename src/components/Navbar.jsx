@@ -2,8 +2,9 @@ import "../styles/navbar.css";
 const Navbar = () =>{
   return (
     <div className="navbar-container">
+      <div className="name">Noman Hussain</div>
       <div className="nav">
-        <div className="name">Noman Hussain</div>
+        
         <div className="list">
           <div className="list-tag">HOME</div>
           <div className="list-tag">PROJECTS</div>

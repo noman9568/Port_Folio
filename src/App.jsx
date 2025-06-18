@@ -13,6 +13,7 @@ const App =  () =>{
   }
 
   return (
+    <div>
     <div className="home">
       <Navbar />
       <div className="home-footer">
@@ -35,6 +36,36 @@ const App =  () =>{
           </div>
         </div>
       </div>
+    </div>
+    <div className="about">
+      <div className="abt">
+        <span>About Me</span>
+        <div className="rightA">→</div>
+      </div>
+      <div className="abt-text">
+        <div className="a-c">
+          <div className="abt-circles">
+          <div className="abt-circle" >
+            <img src="./key.jpg" className="pc-img" alt="Not found" />
+          </div>
+          <div className="sm-circle" />
+          </div>
+        </div>
+        <div className="about-me">
+          <span>
+            Meet Noman Hussain, a dedicated web developer and B.Tech IT student at ABES Engineering College. Skilled in HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB, he builds responsive, full-stack applications. From recipe blogs to a real-time Canteen Queue Tracker, Noman focuses on creating efficient, user-friendly solutions while staying updated with the latest tech trends.
+          </span>
+          <div className="abt-contact">
+            <div className="contact-btn">Contact Me</div>
+            <div className="dots">
+              <div className="dot"></div>
+              <div className="dot"></div>
+              <div className="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   )
 }
