@@ -9,7 +9,7 @@ const Navbar = () =>{
           <div className="list-tag">HOME</div>
           <div className="list-tag">PROJECTS</div>
           <div className="list-tag">ABOUT</div>
-          <div className="list-tag">CONTACT</div>
+          <div className="list-tag">SERVICES</div>
         </div>
       </div>
       <div className="contact">
