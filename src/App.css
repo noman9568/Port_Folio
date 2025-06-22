@@ -707,13 +707,30 @@
     width: 80px;
   }
   .p_block, .pImg{
-    width: 215px;
+    width: 210px;
   }
   #block1, #block2, #block3 {
     height: 180px;
   }
   #block1, #block2, #block3, #block4, #block5{
     padding: 0.8rem;
+  }
+  .projects-block{
+    width: 96%;
+  }
+  .p_detail {
+    .name{
+      font-size: 1.1rem;
+    }
+    .tech_used{
+      font-size: 0.75rem;
+    }
+  }
+  .p01{
+    border-bottom-right-radius: 0.8rem;
+  }
+  .abt-text{
+    width: 90%;
   }
 }
 @media (max-width:675px) {
@@ -735,6 +752,41 @@
   .detail{
     font-size: 1.5rem;
   }
+  .p_block, .pImg{
+    width: 180px;
+  }
+  .p_detail {
+    padding-left: 0.4rem;
+    .name{
+      font-size: 1rem;
+    }
+    .tech_used{
+      font-size: 0.65rem;
+    }
+  }
+  .a-c {
+    height: 265px;
+    min-width: 265px;
+  }
+  .abt-circle {
+    height: 265px;
+    width: 265px;
+  }
+  .about-me span{
+    font-size: 0.95rem;
+  }
+  .contact-btn{
+    font-size: 1.2rem;
+    padding: 0.15rem 0.8rem;
+  }
+  .sm-circle{
+    height: 60px;
+    width: 70px;
+  }
+  .imgOverlay{
+    font-size: 0.7rem;
+    padding: 0.7rem;
+  }
 }
 @media (max-width:575px) {
   .header span{
@@ -744,6 +796,7 @@
     font-size: 4.5rem;
   }
   #block1, #block2, #block3{
+    width: 32%;
     height: 190px;
   }
   #block4, #block5{
@@ -761,5 +814,43 @@
   }
   .design{
     height: 300px;
+  }
+  .block-head{
+    margin-bottom: 0.5rem;
+  }
+  .p_block, .pImg{
+    width: 150px;
+  }
+  .p_detail {
+    .name{
+      font-size: 0.8rem;
+    }
+    .tech_used{
+      font-size: 0.55rem;
+    }
+  }
+  .p01{
+    border-bottom-right-radius: 0.5rem;
+  }
+  .a-c {
+    height: 200px;
+    min-width: 200px;
+  }
+  .abt-circle {
+    height: 200px;
+    width: 200px;
+  }
+  .p01 span{
+    font-size: 0.8rem;
+  }
+  .sm-circle{
+    height: 45px;
+    width: 55px;
+  }
+  .head{
+    font-size: 0.9rem;
+  }
+  .desc{
+    font-size: 0.65rem;
   }
 }

@@ -63,6 +63,22 @@
   font-size: 1.3rem;
   padding: 0.3rem 1rem;
 }
+.sidebar-icon{
+  font-size: 2.4rem;
+  /* font-weight: 700; */
+  color: white;
+  display: none;
+  stroke-width: 0.6px;
+  margin-right: 0.2rem;
+  cursor: pointer;
+}
+.sidebar{
+  display: none;
+}
+
+
+
+
 @media (max-width:1350px) {
   .list{
     gap: 2rem;
@@ -83,4 +99,33 @@
   .navbar-container{
     width: 92%;
   }
+}
+@media (max-width:800px) {
+  .navbar-container{
+    width: 94%;
+  }
+  .name{
+    font-size: 1.6rem;
+  }
+  .list-tag{
+    font-size: 0.95rem;
+  }
+  .contact{
+    font-size: 1.15rem;
+  }
+}
+@media (max-width:700px) {
+  .sidebar-icon{
+    display: block;
+  }
+  .nav , .contact{
+    display: none;
+  }
+}
+@media (max-width:575px) {
+  .sidebar-icon{
+  font-size: 2.2rem;
+  stroke-width: 0.6px;
+  margin-right: 0.2rem;
+}
 }
