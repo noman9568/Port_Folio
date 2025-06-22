@@ -3,11 +3,13 @@
   width: 100%;
   min-height: 100vh;
 }
+html, body{
+  margin: 0;
+  padding: 0;
+}
 *{
   /* outline: 1px solid red; */
 }
-
-/* Home Page CSS */
 .home{
   box-sizing: border-box;
   min-height: 100vh;
@@ -307,11 +309,9 @@
 @keyframes dotMove {
   0%,100%{
     transform: translateX(0);
-    /* transform: scale(1); */
   }
   50%{
     transform: translateX(2rem);
-    /* transform: scale(1.1); */
   }
 }
 
@@ -591,9 +591,6 @@
   .skill-blocks .blocks{
     width: 80%;
   }
-  .p_block{
-    height: 320px;
-  }
 }
 @media (max-width:1250px) {
   .skill-blocks .blocks{
@@ -628,8 +625,11 @@
   .projects-block{
     width: 94%;
   }
-  .home, .about, .skills, .projects{
+  .home, .about, .skills{
     height: max-content;
+  }
+  .projects{
+    height: 80vh;
   }
 }
 @media (max-width:900px) {
@@ -787,6 +787,27 @@
     font-size: 0.7rem;
     padding: 0.7rem;
   }
+  .about-me{
+    gap: 2rem;
+  }
+  .dots{
+    gap: 0.8rem;
+  }
+  .dot{
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+  @keyframes dotMove {
+  0%,100%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-1.5rem);
+  }
+}
+  .projects{
+    height: 60vh;
+  }
 }
 @media (max-width:575px) {
   .header span{
@@ -798,9 +819,6 @@
   #block1, #block2, #block3{
     width: 32%;
     height: 190px;
-  }
-  #block4, #block5{
-    height: 150px;
   }
   .second{
     gap: 1rem;
@@ -818,9 +836,9 @@
   .block-head{
     margin-bottom: 0.5rem;
   }
-  .p_block, .pImg{
+  /* .p_block, .pImg{
     width: 150px;
-  }
+  } */
   .p_detail {
     .name{
       font-size: 0.8rem;
@@ -852,5 +870,94 @@
   }
   .desc{
     font-size: 0.65rem;
+  }
+  .about-me span{
+    font-size: 0.8rem;
+  }
+  .sm-circle{
+    bottom: 2rem;
+  }
+  .projects-block{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+  .projects{
+    height: 70vh;
+  }
+}
+@media (max-width:480px) {
+  .imgOverlay{
+    font-size: 0.6rem;
+  }
+  .p_detail .name{
+    font-size: 0.7rem;
+  }
+  .dot3{
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  .head{
+    font-size: 0.8rem;
+  }
+  .desc{
+    font-size: 0.6rem;
+  }
+  #block1, #block2, #block3{
+    height: 175px;
+  }
+  #block4, #block5{
+    height: 145px;
+  }
+  .abt-circle{
+    height: 180px;
+    width: 180px;
+  }
+  .abt-text{
+    gap: 1rem;
+  }
+  .a-c{
+    min-width: 180px;
+  }
+  .contact-btn{
+    font-size: 1rem;
+    padding: 0.15rem 0.7rem;
+  }
+  .header span{
+    font-size: 3.4rem;
+  }
+  .user-name{
+    font-size: 4.2rem;
+  }
+  .header{
+    align-items: center;
+  }
+}
+@media (max-width:425px) {
+  .abt-circle{
+    height: 150px;
+    width: 150px;
+  }
+  .abt-text{
+    gap: 0.5rem;
+  }
+  .a-c{
+    min-width: 160px;
+  }
+  .about-me span{
+    font-size: 0.7rem;
+  }
+  .p_block, .pImg{
+    width: 165px;
+  }
+  .p_detail .name{
+    font-size: 0.65rem
+  }
+  .service-icon {
+    height: 20px;
+    width: 20px;
+  }
+  #block1, #block2, #block3, #block4, #block5 {
+    padding: 0.6rem;
   }
 }

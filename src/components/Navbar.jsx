@@ -17,7 +17,7 @@ const Navbar = () =>{
       </div>
       <RxHamburgerMenu className="sidebar-icon"/>
       <div className="sidebar">
-
+        
       </div>
     </div>
   )

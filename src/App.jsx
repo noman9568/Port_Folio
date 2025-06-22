@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 import FloatingCircle from "./FloatingCircle.jsx";
+
 const App =  () =>{
 
   const handleDownload = () =>{

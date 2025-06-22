@@ -7,8 +7,8 @@ const FloatingCircle = () => {
   const controls = useAnimation();
 
   const generateRandom = () => ({
-    x: Math.random() * 60, // range: -20 to +20
-    y: Math.random() * 60,
+    x: Math.random() * 40, // range: -20 to +20
+    y: Math.random() * 40,
     transition: {
       duration: 2 + Math.random(), // 2s to 4s
       ease: "easeInOut",
