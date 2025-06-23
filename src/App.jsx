@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 import FloatingCircle from "./FloatingCircle.jsx";
+import ContactForm from "./components/ContactForm.jsx";
 
 const App =  () =>{
 
@@ -181,6 +182,13 @@ const App =  () =>{
           </div>
         </div>
       </div>
+    </div>
+    <div className="contact-block">
+      <div className="header">
+        <span>Contact Me</span>
+        <div className="rightA">→</div>
+      </div>
+      <ContactForm />
     </div>
     </div>
   )

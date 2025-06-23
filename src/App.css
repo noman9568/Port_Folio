@@ -10,13 +10,13 @@ html, body{
 *{
   /* outline: 1px solid red; */
 }
+
 .home{
   box-sizing: border-box;
   min-height: 100vh;
   padding-top: 2rem;
   overflow: hidden;
   background: linear-gradient(to right,#1c0122 0%, #070c21 10%, #3d1a52 55%, #932178 85%, #c0289c 100%);
-  /* backdrop-filter: blur(10px); */
 }
 @media (max-width:1350px) {
   *{
@@ -149,9 +149,6 @@ html, body{
     transform: scale(1.05);
   }
 }
-/* .CV:hover{
-  transform: scale(1.03);
-} */
 .cv-wrap{
   position: absolute;
   /* padding: 12px; */
@@ -352,7 +349,6 @@ html, body{
     font-size: 1.7rem;
     font-weight: 500;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* color: linear-gradient(to right,#630578 0%, #0f1e59 10%, #652987 55%, #6b1231 100%); */
     background: linear-gradient(to right,#b48af8 0%, #5a7afa 50%, #6299ff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -571,7 +567,49 @@ html, body{
 }
 
 
-
+/* Contact Page */
+.contact-block{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 2rem;
+  overflow: hidden;
+  background: linear-gradient(to right,#1c0122 0%, #0b1336 10%, #50256b 55%, #96207a 85%, #cc2ba6 100%);
+}
+.contact-block form{
+  margin: 0 auto;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Inter",sans-serif;
+  margin-top: 2rem;
+  input , textarea{
+    padding: 0.7rem 0.8rem;
+    background-color: rgba(21, 21, 21, 0.632);
+    color: rgb(245, 245, 245);
+    border-radius: 20px;
+    font-size: 1.05rem;
+    border: 0;
+    box-shadow: 0 0 20px rgba(45, 45, 45, 0.186);
+  }
+  input:focus , textarea:focus{
+    outline: 0;
+  }
+  textarea{
+    height: 100px;
+    font-family: "Inter",sans-serif;
+  }
+  button{
+    width: min-content;
+    border-radius: 0.7rem;
+    background-color: rgb(137, 227, 231);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 0.3rem 2rem;
+    font-size: 1.1rem;
+    border: 0;
+  }
+}
 
 
 
@@ -679,6 +717,9 @@ html, body{
     height: 25px;
     width: 25px;
   }
+  .contact-block form{
+    max-width: 380px;
+  }
 }
 @media (max-width:800px) {
   .circle{
@@ -734,6 +775,9 @@ html, body{
   }
 }
 @media (max-width:675px) {
+  .contact-block form{
+    max-width: 350px;
+  }
   .home-footer{
     flex-direction: column;
   }
