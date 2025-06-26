@@ -33,7 +33,10 @@ const ContactForm = () => {
       <input type="text" name="user_name" placeholder="Enter your name here..." required />
       <input type="email" name="user_email" placeholder="Enter your email here..." required />
       <textarea name="message" placeholder="Enter the message here..." required />
-      <button type="submit">Send</button>
+      <div>
+        <button type="submit">Send</button>
+        <div className="dot3 c-dot"></div>
+      </div>
     </form>
   );
 };

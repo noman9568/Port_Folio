@@ -189,6 +189,11 @@ const App =  () =>{
         <div className="rightA">→</div>
       </div>
       <ContactForm />
+      <div className="b-shadow">
+        <div className="b1"></div>
+        <div className="b1"></div>
+        <div className="b1"></div>
+      </div>
     </div>
     </div>
   )
