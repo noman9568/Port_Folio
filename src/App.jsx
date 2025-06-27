@@ -3,17 +3,15 @@ import "./App.css";
 import FloatingCircle from "./FloatingCircle.jsx";
 import "./styles/navbar.css";
 import { RxHamburgerMenu } from "react-icons/rx";
-// import { IoHomeOutline } from "react-icons/io5";
 import { AiFillHome } from "react-icons/ai";
-// import { GoProjectRoadmap } from "react-icons/go";
 import { VscProject } from "react-icons/vsc";
-// import { FcAbout } from "react-icons/fc";
 import { FaUser } from "react-icons/fa";
-// import { GrServices } from "react-icons/gr";
 import { MdMiscellaneousServices } from "react-icons/md";
 import { IoMdContact } from "react-icons/io";
 import ContactForm from "./components/ContactForm.jsx";
 import { useEffect, useState } from "react";
+
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const App =  () =>{
   const [sidebar,setSidebar] = useState(false);
@@ -81,9 +79,9 @@ const App =  () =>{
             </div>
             <div className="circle"></div>
             <div className="social-media">
-              <FloatingCircle />
-              <FloatingCircle />
-              <FloatingCircle />
+              <FloatingCircle icon={FaGithub} link="https://github.com/noman9568" />
+              <FloatingCircle icon={FaLinkedin} link="https://www.linkedin.com/in/noman-hussain-244bb525a" />
+              {/* <FloatingCircle /> */}
             </div>
 
           </div>

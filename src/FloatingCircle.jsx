@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 
-const FloatingCircle = () => {
+const FloatingCircle = ({ icon:Icon, link }) => {
   const controls = useAnimation();
 
   const generateRandom = () => ({
@@ -22,7 +22,18 @@ const FloatingCircle = () => {
     float();
   }, [controls]);
 
-  return <motion.div className="small-circle" animate={controls} />;
+  return (
+  <motion.a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      animate={controls}
+      className="small-circle"
+      style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "1.2rem" }}
+    >
+      <Icon />
+    </motion.a>
+  )
 };
 
 export default FloatingCircle;
