@@ -1,5 +1,4 @@
-import "../styles/navbar.css";
-import { RxHamburgerMenu } from "react-icons/rx";
+
 const Navbar = () =>{
   return (
     <div className="navbar-container">
@@ -17,7 +16,10 @@ const Navbar = () =>{
       </div>
       <RxHamburgerMenu className="sidebar-icon"/>
       <div className="sidebar">
-        
+        <div className="block">HOME</div>
+        <div className="block">PROJECTS</div>
+        <div className="block">ABOUT</div>
+        <div className="block">SERVICES</div>
       </div>
     </div>
   )

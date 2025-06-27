@@ -1,10 +1,22 @@
 import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 import FloatingCircle from "./FloatingCircle.jsx";
+import "./styles/navbar.css";
+import { RxHamburgerMenu } from "react-icons/rx";
+// import { IoHomeOutline } from "react-icons/io5";
+import { AiFillHome } from "react-icons/ai";
+// import { GoProjectRoadmap } from "react-icons/go";
+import { VscProject } from "react-icons/vsc";
+// import { FcAbout } from "react-icons/fc";
+import { FaUser } from "react-icons/fa";
+// import { GrServices } from "react-icons/gr";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { IoMdContact } from "react-icons/io";
 import ContactForm from "./components/ContactForm.jsx";
+import { useEffect, useState } from "react";
 
 const App =  () =>{
-
+  const [sidebar,setSidebar] = useState(false);
   const handleDownload = () =>{
     const link = document.createElement("a");
     link.href = "./Resume.pdf";
@@ -14,10 +26,49 @@ const App =  () =>{
     document.body.removeChild(link);
   }
 
+  const openSidebar = () =>{
+    setSidebar(!sidebar);
+  }
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 700 && sidebar) {
+        setSidebar(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [sidebar]);
+
   return (
-    <div>
-    <div className="home">
-      <Navbar />
+    <div className="main-container">
+    <div className="home" id="home">
+      {/* <Navbar /> */}
+      <div className="navbar-container">
+            <div className="name">Noman Hussain</div>
+            <div className="nav">
+              <div className="list">
+                <div className="list-tag" onClick={() => document.getElementById("home").scrollIntoView({ behavior: 'smooth' })}>HOME</div>
+                <div className="list-tag" onClick={() => document.getElementById("projects").scrollIntoView({ behavior: 'smooth' })}>PROJECTS</div>
+                <div className="list-tag" onClick={() => document.getElementById("about").scrollIntoView({ behavior: 'smooth' })}>ABOUT</div>
+                <div className="list-tag" onClick={() => document.getElementById("service").scrollIntoView({ behavior: 'smooth' })}>SERVICES</div>
+              </div>
+            </div>
+            <div className="contact" onClick={() => document.getElementById("contact").scrollIntoView({behavior : 'smooth'})}>
+              Contact Me
+            </div>
+            <RxHamburgerMenu className="sidebar-icon" onClick={openSidebar}/>
+            {sidebar && <div className="sidebar">
+              <div className="block" onClick={() => { document.getElementById("home").scrollIntoView({ behavior: 'smooth' }); setSidebar(false)}}><AiFillHome /></div>
+              <div className="block" onClick={() => document.getElementById("about").scrollIntoView({ behavior: 'smooth' })}><FaUser /></div>
+              <div className="block" onClick={() => document.getElementById("service").scrollIntoView({ behavior: 'smooth' })}><MdMiscellaneousServices /></div>
+              <div className="block" onClick={() => document.getElementById("projects").scrollIntoView({ behavior: 'smooth' })}><VscProject /></div>
+              <div className="block" onClick={() => document.getElementById("contact").scrollIntoView({ behavior: 'smooth' })}><IoMdContact /></div>
+            </div> }
+      </div>
       <div className="home-footer">
         <div className="name-detail">
           <div className="user-name">Noman Hussain</div>
@@ -39,7 +90,7 @@ const App =  () =>{
         </div>
       </div>
     </div>
-    <div className="about">
+    <div className="about" id="about">
       <div className="header">
         <span>About Me</span>
         <div className="rightA">→</div>
@@ -58,7 +109,7 @@ const App =  () =>{
             Meet Noman Hussain, a dedicated web developer and B.Tech IT student at ABES Engineering College. Skilled in HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB, he builds responsive, full-stack applications. From recipe blogs to a real-time Canteen Queue Tracker, Noman focuses on creating efficient, user-friendly solutions while staying updated with the latest tech trends.
           </span>
           <div className="abt-contact">
-            <div className="contact-btn">Contact Me</div>
+            <div className="contact-btn" onClick={() => document.getElementById("contact").scrollIntoView({behavior : 'smooth'})}>Contact Me</div>
             <div className="dots">
               <div className="dot"></div>
               <div className="dot"></div>
@@ -68,7 +119,7 @@ const App =  () =>{
         </div>
       </div>
     </div>
-    <div className="skills">
+    <div className="skills" id="service">
       <div className="header" id="services">
         <div>
           <span>What I do</span>
@@ -128,7 +179,7 @@ const App =  () =>{
         </div>
       </div>
     </div>
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="header" id="services">
         <div>
           <span>Projects</span>
@@ -183,7 +234,7 @@ const App =  () =>{
         </div>
       </div>
     </div>
-    <div className="contact-block">
+    <div className="contact-block" id="contact">
       <div className="header">
         <span>Contact Me</span>
         <div className="rightA">→</div>
