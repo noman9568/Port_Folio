@@ -193,10 +193,10 @@ const App =  () =>{
             </div>
           </div>
           <div className="p01">
-            <div className="p_detail">
+            <a href="https://canteen-queue-tracker.vercel.app/" target="_blank" className="p_detail">
               <div className="name">Canteen Queue Tracker</div>
               <div className="tech_used">MERN</div>
-            </div>
+            </a>
             <div className="dot3"></div>
           </div>
         </div>
@@ -208,10 +208,10 @@ const App =  () =>{
             </div>
           </div>
           <div className="p01">
-            <div className="p_detail">
+            <a href="https://recipe-blog-fx35.onrender.com" target="_blank" className="p_detail">
               <div className="name">Recipe Blog</div>
               <div className="tech_used">Express.js, EJS</div>
-            </div>
+            </a>
             <div className="dot3"></div>
           </div>
         </div>
@@ -223,10 +223,10 @@ const App =  () =>{
             </div>
           </div>
           <div className="p01">
-            <div className="p_detail">
+            <a href="https://expense-tracker-8hwy.onrender.com" target="_blank" className="p_detail">
               <div className="name"> Expense Tracker</div>
               <div className="tech_used">Express.js, EJS</div>
-            </div>
+            </a>
             <div className="dot3"></div>
           </div>
         </div>
@@ -244,6 +244,12 @@ const App =  () =>{
         <div className="b1"></div>
       </div>
     </div>
+    <div className="footer">
+      <div className="rights-reserved" style={{ textAlign: "center", color: "#aaa" }}>
+        © 2025 Noman Hussain. All rights reserved.
+      </div>
+    </div>
+
     </div>
   )
 }
